@@ -22,6 +22,7 @@
   --bg-footer: var(--color-gray-100);
 
   /* Typography */
+  --font-display: 'BBH Bartle', Georgia, serif;        /* ← NEW: for headings */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --text-base: 1.0625rem;                    /* ~17px */
   --line-height: 1.6;
@@ -47,7 +48,7 @@
   /* Effects */
   --radius-md: 12px;
   --radius-lg: 16px;
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 6px rgba(233, 13, 13, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
   --transition-fast: 200ms ease;
@@ -110,6 +111,7 @@ h1, h2, h3, h4 {
   margin-top: 0;
   margin-bottom: var(--space-md);
   font-weight: var(--font-weight-bold);
+  font-family: var(--font-display); /* ← APPLY BBH BARTLE TO HEADINGS */
 }
 
 h1 {
@@ -151,6 +153,7 @@ p {
   text-decoration: none;
   transition: all var(--transition-normal);
   box-shadow: var(--shadow-sm);
+  font-family: var(--font-sans); /* Ensure buttons use Inter */
 }
 
 .btn-primary {
@@ -170,6 +173,7 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
+  font-family: var(--font-sans);
 }
 
 a:hover,
@@ -193,6 +197,7 @@ a:focus {
   font-weight: var(--font-weight-bold);
   color: var(--color-dark);
   text-decoration: none;
+  font-family: var(--font-display); /* Logo uses display font */
 }
 
 .logo a:hover {
@@ -210,6 +215,7 @@ a:focus {
 .main-nav a {
   font-weight: var(--font-weight-medium);
   color: var(--color-secondary);
+  font-family: var(--font-sans); /* Nav uses body font */
 }
 
 .main-nav a:hover,
@@ -261,6 +267,7 @@ a:focus {
 .card h3 {
   color: var(--color-primary);
   margin-bottom: var(--space-sm);
+  font-family: var(--font-display); /* Service titles use display font */
 }
 
 /* ---- Forms ---- */
@@ -276,6 +283,7 @@ a:focus {
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-2xs);
   display: block;
+  font-family: var(--font-sans);
 }
 
 .contact-form input,
@@ -309,6 +317,7 @@ a:focus {
   text-align: center;
   margin: 0;
   color: var(--color-secondary);
+  font-family: var(--font-sans);
 }
 
 .social-links {
@@ -321,6 +330,7 @@ a:focus {
 .social-links a {
   font-weight: var(--font-weight-medium);
   color: var(--color-secondary);
+  font-family: var(--font-sans);
 }
 
 .social-links a:hover {
