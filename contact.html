@@ -7,6 +7,7 @@
   <meta name="description" content="Get in touch with our team." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   
+  <!-- ✅ FIXED: Removed extra spaces in font links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -35,6 +36,8 @@
     <section class="contact section-padding">
       <div class="container">
         <h2>Contact Us</h2>
+        
+        <!-- Contact Form -->
         <form class="contact-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required />
@@ -47,6 +50,20 @@
           
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+
+        <!-- ✅ GOOGLE MAP EMBED -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.2616533415166!2d4.3411562119323435!3d52.093169471835495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b72bf8a744e1%3A0xda13663fbed5ea94!2sPaleis%20Huis%20ten%20Bosch!5e0!3m2!1snl!2snl!4v1766828157115!5m2!1snl!2snl"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location of Gooner ahh office at Emirates Stadium, London">
+          </iframe>
+        </div>
       </div>
     </section>
   </main>
