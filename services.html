@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gooner ahh website</title>
-  <meta name="description" content="Welcome to our football-inspired web studio." />
+  <title>Our Services | Gooner ahh</title>
+  <meta name="description" content="Web design, development, and branding for football brands." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   
-  <!-- Fixed Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,9 +22,9 @@
       </h1>
       <nav class="main-nav" role="navigation" aria-label="Primary">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -34,11 +32,23 @@
   </header>
 
   <main id="main-content" role="main">
-    <section class="hero">
-      <div class="container hero-content">
-        <h2>Welcome to Gooner ahh</h2>
-        <p>We build bold, beautiful websites for football fans and brands.</p>
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <section class="services section-padding">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+          <article class="card">
+            <h3>Web Design</h3>
+            <p>Stunning, responsive designs inspired by football aesthetics—clean, bold, and memorable.</p>
+          </article>
+          <article class="card">
+            <h3>Web Development</h3>
+            <p>Fast, accessible, and SEO-friendly websites built with modern HTML, CSS, and JavaScript.</p>
+          </article>
+          <article class="card">
+            <h3>Branding</h3>
+            <p>Logos, color schemes, and digital identity packages that capture your team’s spirit.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>

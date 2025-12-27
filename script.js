@@ -1,5 +1,9 @@
-// Sophisticated interactivity with refined UX and visual polish
-// Fully compatible with your existing HTML and CSS — no changes needed
+/**
+ * Refined interactivity for multi-page website
+ * - Form feedback remains
+ * - Smooth scroll only for in-page anchors (e.g., long pages)
+ * - Scroll-based nav highlighting REMOVED (handled via HTML)
+ */
 
 (function () {
   'use strict';
@@ -7,18 +11,20 @@
   // Respect user motion preferences
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ==== 1. Smooth Scrolling (Enhanced) ====
+  // ==== 1. Smooth Scrolling (for in-page anchors only) ====
+  // Only applies if link points to an ID on the SAME page (e.g., #top, #faq)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+
+    // Check if target exists on this page
+    const target = document.querySelector(href);
+    if (!target) return; // If #about doesn't exist here, do nothing
+
     anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-
-      const target = document.querySelector(href);
-      if (!target) return;
-
       e.preventDefault();
 
-      // Calculate offset (account for sticky header if present)
+      // Calculate offset (account for sticky header)
       const header = document.querySelector('.site-header');
       const offset = header ? header.offsetHeight + 20 : 20;
 
@@ -35,20 +41,18 @@
     });
   });
 
-  // ==== 2. Elegant Form Submission Feedback ====
-  const contactForm = document.querySelector('.contact form');
+  // ==== 2. Elegant Form Submission Feedback (Contact Page Only) ====
+  const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const nameInput = this.querySelector('input[type="text"]');
-      const name = nameInput ? nameInput.value.trim() : 'there';
-      const emailInput = this.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value : '';
+      const nameInput = this.querySelector('#name');
+      const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'there';
 
-      // Create subtle in-page success message (no alert!)
+      // Create subtle in-page success message
       const feedback = document.createElement('div');
-      feedback.textContent = `Thank you, ${name}! Your message has been received. We’ll contact you soon at ${email}.`;
+      feedback.textContent = `Thank you, ${name}! We'll be in touch soon.`;
       feedback.style.cssText = `
         position: fixed;
         bottom: 2rem;
@@ -65,7 +69,7 @@
         animation: fadeInUp 0.4s forwards;
       `;
 
-      // Inject feedback style if not already present
+      // Inject animation style if not present
       if (!document.getElementById('js-feedback-style')) {
         const style = document.createElement('style');
         style.id = 'js-feedback-style';
@@ -95,66 +99,5 @@
       // Reset form
       this.reset();
     });
-  }
-
-  // ==== 3. Refined Scroll-Based Active Navigation ====
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-  if (sections.length && navLinks.length) {
-    // Debounced scroll handler for performance
-    let ticking = false;
-    function updateActiveNav() {
-      const scrollPos = window.scrollY + 100; // 100px tolerance
-
-      let currentId = '';
-      for (const section of sections) {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-          currentId = section.getAttribute('id');
-          break;
-        }
-      }
-
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
-      });
-
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateActiveNav);
-        ticking = true;
-      }
-    });
-
-    // Initial check
-    updateActiveNav();
-  }
-
-  // Optional: Add minimal active style via JS if not in CSS
-  if (navLinks.length && !document.querySelector('nav a.active')) {
-    const activeStyle = document.createElement('style');
-    activeStyle.textContent = `
-      nav a.active {
-        color: var(--color-primary);
-        font-weight: var(--font-weight-bold);
-        position: relative;
-      }
-      nav a.active::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--color-primary);
-        border-radius: 2px;
-      }
-    `;
-    document.head.appendChild(activeStyle);
   }
 })();
