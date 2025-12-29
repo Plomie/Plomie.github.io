@@ -1,26 +1,8 @@
-const toggleButton = document.querySelector('.dark-mode-toggle');
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem('theme');
 const html = document.documentElement;
 
-// Check system preference and localStorage
-const storedTheme = localStorage.getItem('theme');
-const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+if (savedTheme === 'dark') {
   html.setAttribute('data-theme', 'dark');
 }
-
-// Toggle theme
-if (toggleButton) {
-  toggleButton.addEventListener('click', () => {
-    const isDark = html.getAttribute('data-theme') === 'dark';
-    if (isDark) {
-      html.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      toggleButton.querySelector('.dark-mode-toggle__icon').textContent = '🌙';
-    } else {
-      html.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      toggleButton.querySelector('.dark-mode-toggle__icon').textContent = '☀️';
-    }
-  });
-}
+// No toggle logic here anymore — handled in settings.js
