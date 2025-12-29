@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Modern Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Home">ModernBiz</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link active">About</a></li>
+          <li><a href="/services.html" class="nav__link">Services</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <span class="dark-mode-toggle__icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about-hero" aria-labelledby="about-heading">
+      <div class="container">
+        <h1 id="about-heading">Our Story</h1>
+        <div class="about-content">
+          <div class="about-text" data-animate>
+            <p>Founded in 2020, Modern Business began with a simple mission: to help companies thrive online with smart, beautiful, and functional digital experiences.</p>
+            <p>Today, we serve clients globally — from startups to enterprises — delivering websites, apps, and strategies that drive real results.</p>
+          </div>
+          <div class="about-image" data-animate>
+            <img src="https://picsum.photos/600/400?grayscale" alt="Team working together" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading">By The Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-card" data-animate>
+            <span class="stat-number">50+</span>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-card" data-animate>
+            <span class="stat-number">100+</span>
+            <p>Projects Delivered</p>
+          </div>
+          <div class="stat-card" data-animate>
+            <span class="stat-number">5</span>
+            <p>Years in Business</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Modern Business. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/darkmode.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Modern Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Home">ModernBiz</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link active">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/services.html" class="nav__link">Services</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <span class="dark-mode-toggle__icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <h1 id="hero-heading" class="hero__title">Build Your Digital Future</h1>
+        <p class="hero__text">A modern, scalable solution for businesses ready to thrive in the digital age.</p>
+        <a href="/contact.html" class="btn btn--primary">Get Started</a>
+      </div>
+    </section>
+
+    <section class="section features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section__title">Why Choose Us</h2>
+        <div class="features__grid">
+          <div class="card" data-animate>
+            <h3>Expertise</h3>
+            <p>Years of experience in delivering high-quality digital products.</p>
+          </div>
+          <div class="card" data-animate>
+            <h3>Innovation</h3>
+            <p>We stay ahead with cutting-edge tools and modern practices.</p>
+          </div>
+          <div class="card" data-animate>
+            <h3>Support</h3>
+            <p>Dedicated support before, during, and after your project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-banner__inner">
+        <h2 id="cta-heading">Ready to transform your business?</h2>
+        <a href="/contact.html" class="btn btn--secondary">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Modern Business. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/darkmode.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/animations.js"></script>
+</body>
+</html>

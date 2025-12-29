@@ -1,0 +1,18 @@
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text: #e5e7eb;
+  --color-text-muted: #94a3b8;
+  --color-accent: #a78bfa;
+  --color-accent-hover: #c4b5fd;
+  --color-border: #334155;
+  --color-card-bg: #1e293b;
+}
+
+[data-theme="dark"] .mobile-menu-toggle span {
+  background-color: #e5e7eb;
+}
+
+[data-theme="dark"] .dark-mode-toggle__icon {
+  content: "☀️";
+}

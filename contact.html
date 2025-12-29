@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Modern Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Home">ModernBiz</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/services.html" class="nav__link">Services</a></li>
+          <li><a href="/contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <span class="dark-mode-toggle__icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h1 id="contact-heading">Get In Touch</h1>
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <div class="form-response" id="form-response" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Modern Business. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/darkmode.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/animations.js"></script>
+</body>
+</html>

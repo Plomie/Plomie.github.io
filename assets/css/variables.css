@@ -1,0 +1,40 @@
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-accent: #7e22ce; /* purple-800 */
+  --color-accent-hover: #6b21a8;
+  --color-border: #e2e8f0;
+  --color-card-bg: #ffffff;
+
+  /* Dark Mode Overrides (set in darkmode.css) */
+
+  /* Typography */
+  --font-family-body: 'Inter', system-ui, sans-serif;
+  --font-family-heading: 'Poppins', system-ui, sans-serif;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1rem;
+  --line-height-body: 1.6;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --border-radius: 0.75rem;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
+
+  /* Z-Index */
+  --z-header: 100;
+  --z-overlay: 90;
+}
