@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings | Modern Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Home">ModernBiz</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/services.html" class="nav__link">Services</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+          <li><a href="/settings.html" class="nav__link active">Settings</a></li>
+        </ul>
+      </nav>
+      <!-- Dark mode toggle REMOVED from header -->
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="settings-heading">
+      <div class="container">
+        <h1 id="settings-heading">Settings</h1>
+
+        <div class="settings-group">
+          <h2>Appearance</h2>
+          <div class="form-group toggle-group">
+            <label for="dark-mode-toggle">Dark Mode</label>
+            <button id="dark-mode-toggle" class="toggle-btn" aria-pressed="false" aria-label="Toggle dark mode">
+              <span class="toggle-track">
+                <span class="toggle-thumb"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h2>Language</h2>
+          <div class="form-group">
+            <label for="language-select">Preferred Language</label>
+            <select id="language-select" class="language-select">
+              <option value="en">English</option>
+              <option value="nl">Nederlands</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Modern Business. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Translations -->
+  <script>
+    const translations = {
+      en: {
+        settings: "Settings",
+        appearance: "Appearance",
+        darkMode: "Dark Mode",
+        language: "Language",
+        preferredLanguage: "Preferred Language",
+        home: "Home",
+        about: "About",
+        services: "Services",
+        contact: "Contact",
+        settingsNav: "Settings",
+        getStarted: "Get Started",
+        contactUs: "Contact Us",
+        buildFuture: "Build Your Digital Future",
+        whyChooseUs: "Why Choose Us",
+        readyTransform: "Ready to transform your business?",
+        ourStory: "Our Story",
+        ourServices: "Our Services",
+        getInTouch: "Get In Touch",
+        send: "Send Message",
+        name: "Name",
+        email: "Email",
+        message: "Message"
+      },
+      nl: {
+        settings: "Instellingen",
+        appearance: "Vormgeving",
+        darkMode: "Donkere Modus",
+        language: "Taal",
+        preferredLanguage: "Voorkeurstaal",
+        home: "Home",
+        about: "Over",
+        services: "Diensten",
+        contact: "Contact",
+        settingsNav: "Instellingen",
+        getStarted: "Aan de slag",
+        contactUs: "Neem contact op",
+        buildFuture: "Bouw aan jouw digitale toekomst",
+        whyChooseUs: "Waarom voor ons kiezen?",
+        readyTransform: "Klaar om je bedrijf te transformeren?",
+        ourStory: "Ons Verhaal",
+        ourServices: "Onze Diensten",
+        getInTouch: "Neem Contact Op",
+        send: "Verstuur Bericht",
+        name: "Naam",
+        email: "E-mail",
+        message: "Bericht"
+      }
+    };
+  </script>
+
+  <script src="/assets/js/darkmode.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/settings.js"></script>
+</body>
+</html>
