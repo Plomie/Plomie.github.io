@@ -6,7 +6,7 @@
   <title data-i18n="contactTitle">Contact | Modern Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
@@ -16,7 +16,7 @@
 <body>
   <header class="header" role="banner">
     <div class="container header__inner">
-      <a href="/" class="logo" aria-label="Home">ModernBiz</a>
+      <a href="/" class="logo bbh-bartle-regular" aria-label="Home">ModernBiz</a>
       <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -24,11 +24,11 @@
       </button>
       <nav class="nav" role="navigation">
         <ul class="nav__list">
-          <li><a href="/" class="nav__link" data-i18n="home">Home</a></li>
-          <li><a href="/about.html" class="nav__link" data-i18n="about">About</a></li>
-          <li><a href="/services.html" class="nav__link" data-i18n="services">Services</a></li>
-          <li><a href="/contact.html" class="nav__link active" data-i18n="contact">Contact</a></li>
-          <li><a href="/settings.html" class="nav__link" data-i18n="settingsNav">Settings</a></li>
+          <li><a href="/" class="nav__link bbh-bartle-regular" data-i18n="home">Home</a></li>
+          <li><a href="/about.html" class="nav__link bbh-bartle-regular" data-i18n="about">About</a></li>
+          <li><a href="/services.html" class="nav__link bbh-bartle-regular" data-i18n="services">Services</a></li>
+          <li><a href="/contact.html" class="nav__link active bbh-bartle-regular" data-i18n="contact">Contact</a></li>
+          <li><a href="/settings.html" class="nav__link bbh-bartle-regular" data-i18n="settingsNav">Settings</a></li>
         </ul>
       </nav>
     </div>
@@ -37,25 +37,25 @@
   <main>
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
-        <h1 id="contact-heading" data-i18n="getInTouch">Get In Touch</h1>
+        <h1 id="contact-heading" class="bbh-bartle-regular" data-i18n="getInTouch">Get In Touch</h1>
         <form class="contact-form" novalidate>
           <div class="form-group">
-            <label for="name" data-i18n="name">Name</label>
-            <input type="text" id="name" name="name" required />
-            <span class="error-message" id="name-error"></span>
+            <label for="name" class="inter-medium" data-i18n="name">Name</label>
+            <input type="text" id="name" name="name" class="inter-normal" required />
+            <span class="error-message inter-normal" id="name-error"></span>
           </div>
           <div class="form-group">
-            <label for="email" data-i18n="email">Email</label>
-            <input type="email" id="email" name="email" required />
-            <span class="error-message" id="email-error"></span>
+            <label for="email" class="inter-medium" data-i18n="email">Email</label>
+            <input type="email" id="email" name="email" class="inter-normal" required />
+            <span class="error-message inter-normal" id="email-error"></span>
           </div>
           <div class="form-group">
-            <label for="message" data-i18n="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <span class="error-message" id="message-error"></span>
+            <label for="message" class="inter-medium" data-i18n="message">Message</label>
+            <textarea id="message" name="message" rows="5" class="inter-normal" required></textarea>
+            <span class="error-message inter-normal" id="message-error"></span>
           </div>
-          <button type="submit" class="btn btn--primary" data-i18n="send">Send Message</button>
-          <div class="form-response" id="form-response" role="alert" aria-live="polite"></div>
+          <button type="submit" class="btn btn--primary inter-medium" data-i18n="send">Send Message</button>
+          <div class="form-response inter-normal" id="form-response" role="alert" aria-live="polite"></div>
         </form>
       </div>
     </section>
@@ -63,7 +63,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Modern Business. All rights reserved.</p>
+      <p class="inter-normal">&copy; 2025 Modern Business. All rights reserved.</p>
     </div>
   </footer>
 

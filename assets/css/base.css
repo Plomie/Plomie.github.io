@@ -4,31 +4,48 @@
   box-sizing: border-box;
 }
 
+/* BBH Bartle */
+.bbh-bartle-regular {
+  font-family: "BBH Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Inter Variants */
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.6;
   background-color: var(--color-bg);
   color: var(--color-text);
   transition: var(--transition);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
   margin-top: 0;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
-
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: var(--font-size-h3); }
 
 img {
   max-width: 100%;
