@@ -4,14 +4,14 @@
   --color-bg-secondary: #f8fafc;
   --color-text: #1e293b;
   --color-text-muted: #64748b;
-  --color-accent: #7e22ce; /* purple-800 */
+  --color-accent: #7e22ce;
   --color-accent-hover: #6b21a8;
   --color-border: #e2e8f0;
   --color-card-bg: #ffffff;
 
   /* Typography */
   --font-family-body: 'Inter', system-ui, sans-serif;
-  --font-family-heading: 'BBH Bartle', serif; /* ✅ Updated to BBH Bartle */
+  --font-family-heading: 'Bebas Neue', cursive; /* ✅ Real Google Font */
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;

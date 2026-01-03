@@ -19,9 +19,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading); /* ✅ Now uses BBH Bartle */
+  font-family: var(--font-family-heading);
   margin-top: 0;
-  font-weight: normal; /* BBH Bartle is display-style; often looks better without bold */
+  font-weight: 400; /* Bebas Neue only has 400 */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h1 { font-size: var(--font-size-h1); }
