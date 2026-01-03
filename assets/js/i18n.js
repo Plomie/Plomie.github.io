@@ -1,5 +1,3 @@
-// i18n.js — Shared internationalization module
-
 const translations = {
   en: {
     home: "Home",
@@ -203,43 +201,39 @@ const translations = {
   }
 };
 
-// Get saved or default language
 function getLanguage() {
   return localStorage.getItem('language') || 'en';
 }
 
-// Apply language to entire page
 function applyLanguage(lang) {
-  if (!translations[lang]) lang = 'en'; // fallback
+  if (!translations[lang]) lang = 'en';
 
   document.documentElement.setAttribute('lang', lang);
 
-  // Update title if possible
-  const titleKeys = ['homeTitle', 'aboutTitle', 'servicesTitle', 'contactTitle', 'settingsTitle'];
-  let newTitle = 'Modern Business';
-  for (const key of titleKeys) {
-    const el = document.querySelector(`[data-i18n="${key}"]`);
-    if (el) {
-      newTitle = translations[lang][key] || newTitle;
-      break;
-    }
+  // Update title
+  const titleEl = document.querySelector('title');
+  const titleKeyMap = {
+    '/': 'homeTitle',
+    '/about.html': 'aboutTitle',
+    '/services.html': 'servicesTitle',
+    '/contact.html': 'contactTitle',
+    '/settings.html': 'settingsTitle'
+  };
+  const path = window.location.pathname;
+  const key = titleKeyMap[path] || 'homeTitle';
+  if (titleEl && translations[lang][key]) {
+    titleEl.textContent = translations[lang][key];
   }
-  document.title = newTitle;
 
-  // Update all translatable elements
+  // Update all data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = translations[lang][key];
-      } else {
-        el.textContent = translations[lang][key];
-      }
+    const k = el.getAttribute('data-i18n');
+    if (translations[lang][k]) {
+      el.textContent = translations[lang][k];
     }
   });
 }
 
-// Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
   const lang = getLanguage();
   applyLanguage(lang);
