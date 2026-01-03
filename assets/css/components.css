@@ -183,12 +183,3 @@ textarea:focus {
 .toggle-btn[aria-pressed="true"] .toggle-thumb {
   transform: translateX(26px);
 }
-
-/* Settings Page */
-.settings-group {
-  margin-bottom: var(--space-xl);
-}
-
-.settings-group h2 {
-  margin-bottom: var(--space-md);
-}

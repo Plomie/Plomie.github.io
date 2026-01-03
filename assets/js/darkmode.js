@@ -1,7 +1,8 @@
-// Apply saved dark mode on every page load
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-});
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem('theme');
+const html = document.documentElement;
+
+if (savedTheme === 'dark') {
+  html.setAttribute('data-theme', 'dark');
+}
+// No toggle logic here anymore — handled in settings.js
