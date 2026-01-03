@@ -35,33 +35,50 @@
   transform: translateY(-2px);
 }
 
-/* Cards */
+/* Cards with glow effect */
 .card,
 .service-card,
 .stat-card {
   background-color: var(--color-card-bg);
-  padding: var(--space-lg);
+  padding: var(--space-md); /* Reduced padding for more content space */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* Subtle glow effect */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+              0 0 15px rgba(126, 34, 206, 0.15); /* Glow shadow */
 }
 
 .card:hover,
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+              0 0 20px rgba(126, 34, 206, 0.25); /* Stronger glow on hover */
 }
 
 .service-icon {
   font-size: 2rem;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm); /* Reduced margin */
+}
+
+.service-card h3 {
+  font-size: 1.4rem; /* Slightly smaller heading */
+  margin-bottom: var(--space-sm);
+}
+
+.service-card p {
+  font-size: 0.95rem; /* Slightly smaller text */
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* Slightly smaller for better fit */
   font-weight: 700;
   display: block;
   margin-bottom: var(--space-xs);
@@ -196,7 +213,7 @@ select:focus {
 }
 
 .settings-group h2 {
-  margin-bottom: var0(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 /* Language Select */

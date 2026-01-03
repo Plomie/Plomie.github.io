@@ -8,14 +8,14 @@
   padding-block: var(--space-md);
 }
 
-/* Accent stripe under header */
+/* Accent stripe under header - thinner (2px) */
 .header::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 2px; /* Thinner accent line */
   background-color: var(--color-accent);
   z-index: var(--z-header);
 }
@@ -32,6 +32,13 @@
   color: var(--color-text);
   text-decoration: none;
   letter-spacing: 1px;
+  /* Glow effect */
+  text-shadow: 0 0 8px rgba(126, 34, 206, 0.3);
+}
+
+/* Navigation on the right */
+.nav {
+  margin-left: auto;
 }
 
 .mobile-menu-toggle {
@@ -54,15 +61,22 @@
 .nav__list {
   display: flex;
   gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
-  font-size: 1.1rem;
+  font-family: "Inter", sans-serif; /* Changed to Inter font */
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem; /* Slightly smaller for better fit */
   color: var(--color-text);
-  padding: var(--space-xs) var(--space-md);
+  padding: var(--space-xs) var(--space-sm); /* Reduced padding */
   border-radius: var(--border-radius);
   transition: var(--transition);
-  letter-spacing: 0.5px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
 }
 
 .nav__link:hover,
@@ -112,7 +126,7 @@
 }
 
 .services-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Slightly wider cards */
 }
 
 .stats-grid {
@@ -196,5 +210,13 @@
 
   .logo.bbh-bartle-regular {
     font-size: 1.5rem;
+  }
+  
+  /* Mobile nav links */
+  .nav__link {
+    font-size: 1.2rem;
+    padding: var(--space-sm) 0;
+    display: block;
+    width: 100%;
   }
 }
