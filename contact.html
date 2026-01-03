@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Modern Business</title>
+  <title data-i18n="contactTitle">Contact | Modern Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -24,39 +24,37 @@
       </button>
       <nav class="nav" role="navigation">
         <ul class="nav__list">
-          <li><a href="/" class="nav__link">Home</a></li>
-          <li><a href="/about.html" class="nav__link">About</a></li>
-          <li><a href="/services.html" class="nav__link">Services</a></li>
-          <li><a href="/contact.html" class="nav__link active">Contact</a></li>
+          <li><a href="/" class="nav__link" data-i18n="home">Home</a></li>
+          <li><a href="/about.html" class="nav__link" data-i18n="about">About</a></li>
+          <li><a href="/services.html" class="nav__link" data-i18n="services">Services</a></li>
+          <li><a href="/contact.html" class="nav__link active" data-i18n="contact">Contact</a></li>
+          <li><a href="/settings.html" class="nav__link" data-i18n="settingsNav">Settings</a></li>
         </ul>
       </nav>
-      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <span class="dark-mode-toggle__icon">🌙</span>
-      </button>
     </div>
   </header>
 
   <main>
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
-        <h1 id="contact-heading">Get In Touch</h1>
+        <h1 id="contact-heading" data-i18n="getInTouch">Get In Touch</h1>
         <form class="contact-form" novalidate>
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" data-i18n="name">Name</label>
             <input type="text" id="name" name="name" required />
             <span class="error-message" id="name-error"></span>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="email">Email</label>
             <input type="email" id="email" name="email" required />
             <span class="error-message" id="email-error"></span>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message" data-i18n="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             <span class="error-message" id="message-error"></span>
           </div>
-          <button type="submit" class="btn btn--primary">Send Message</button>
+          <button type="submit" class="btn btn--primary" data-i18n="send">Send Message</button>
           <div class="form-response" id="form-response" role="alert" aria-live="polite"></div>
         </form>
       </div>
@@ -72,5 +70,6 @@
   <script src="/assets/js/darkmode.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/i18n.js"></script>
 </body>
 </html>

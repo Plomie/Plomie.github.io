@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="ervisor" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Modern Business</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="servicesTitle">Services | Modern Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -24,42 +24,40 @@
       </button>
       <nav class="nav" role="navigation">
         <ul class="nav__list">
-          <li><a href="/" class="nav__link">Home</a></li>
-          <li><a href="/about.html" class="nav__link">About</a></li>
-          <li><a href="/services.html" class="nav__link active">Services</a></li>
-          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+          <li><a href="/" class="nav__link" data-i18n="home">Home</a></li>
+          <li><a href="/about.html" class="nav__link" data-i18n="about">About</a></li>
+          <li><a href="/services.html" class="nav__link active" data-i18n="services">Services</a></li>
+          <li><a href="/contact.html" class="nav__link" data-i18n="contact">Contact</a></li>
+          <li><a href="/settings.html" class="nav__link" data-i18n="settingsNav">Settings</a></li>
         </ul>
       </nav>
-      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <span class="dark-mode-toggle__icon">🌙</span>
-      </button>
     </div>
   </header>
 
   <main>
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
-        <h1 id="services-heading">Our Services</h1>
+        <h1 id="services-heading" data-i18n="ourServices">Our Services</h1>
         <div class="services-grid">
           <div class="service-card" data-animate>
             <div class="service-icon">💻</div>
-            <h3>Web Development</h3>
-            <p>Custom, responsive websites built with performance and SEO in mind.</p>
+            <h3 data-i18n="webDev">Web Development</h3>
+            <p data-i18n="webDevText">Custom, responsive websites built with performance and SEO in mind.</p>
           </div>
           <div class="service-card" data-animate>
             <div class="service-icon">📱</div>
-            <h3>App Design</h3>
-            <p>Intuitive mobile and desktop applications crafted for your users.</p>
+            <h3 data-i18n="appDesign">App Design</h3>
+            <p data-i18n="appDesignText">Intuitive mobile and desktop applications crafted for your users.</p>
           </div>
           <div class="service-card" data-animate>
             <div class="service-icon">🔍</div>
-            <h3>SEO Optimization</h3>
-            <p>Boost your visibility and traffic with proven search strategies.</p>
+            <h3 data-i18n="seo">SEO Optimization</h3>
+            <p data-i18n="seoText">Boost your visibility and traffic with proven search strategies.</p>
           </div>
           <div class="service-card" data-animate>
             <div class="service-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Beautiful, user-centered interfaces that convert and retain.</p>
+            <h3 data-i18n="uiux">UI/UX Design</h3>
+            <p data-i18n="uiuxText">Beautiful, user-centered interfaces that convert and retain.</p>
           </div>
         </div>
       </div>
@@ -75,5 +73,6 @@
   <script src="/assets/js/darkmode.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/i18n.js"></script>
 </body>
 </html>
