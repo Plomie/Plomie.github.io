@@ -1,3 +1,31 @@
+/* Header: logo and nav use heading font */
+.logo,
+.nav__link {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo {
+  font-size: 1.75rem;
+  color: var(--color-text);
+}
+
+.nav__link {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link.active {
+  color: var(--color-accent);
+}
+
 /* Header */
 .header {
   position: sticky;
