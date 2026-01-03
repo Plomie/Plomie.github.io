@@ -1,31 +1,3 @@
-/* Header: logo and nav use heading font */
-.logo,
-.nav__link {
-  font-family: var(--font-family-heading);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.logo {
-  font-size: 1.75rem;
-  color: var(--color-text);
-}
-
-.nav__link {
-  font-size: 1.1rem;
-  color: var(--color-text);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-}
-
-.nav__link:hover,
-.nav__link:focus,
-.nav__link.active {
-  color: var(--color-accent);
-}
-
 /* Header */
 .header {
   position: sticky;
@@ -36,6 +8,18 @@
   padding-block: var(--space-md);
 }
 
+/* Accent stripe under header */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-accent);
+  z-index: var(--z-header);
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -43,10 +27,11 @@
   gap: var(--space-md);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+.logo.bbh-bartle-regular {
+  font-size: 1.8rem;
   color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .mobile-menu-toggle {
@@ -72,36 +57,18 @@
 }
 
 .nav__link {
-  font-weight: 500;
+  font-size: 1.1rem;
   color: var(--color-text);
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
   border-radius: var(--border-radius);
   transition: var(--transition);
+  letter-spacing: 0.5px;
 }
 
 .nav__link:hover,
 .nav__link:focus,
 .nav__link.active {
   color: var(--color-accent);
-  background-color: var(--color-bg-secondary);
-}
-
-.dark-mode-toggle {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: var(--space-xs);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.dark-mode-toggle:hover,
-.dark-mode-toggle:focus {
-  background-color: var(--color-bg-secondary);
 }
 
 /* Main Sections */
@@ -110,8 +77,8 @@
 }
 
 .section__title {
-  text-align: center;
   margin-bottom: var(--space-xl);
+  text-align: center;
 }
 
 .hero {
@@ -122,11 +89,12 @@
 
 .hero__title {
   margin-bottom: var(--space-md);
+  line-height: 1.2;
 }
 
 .hero__text {
   max-width: 600px;
-  margin-inline: auto var(--space-md);
+  margin-inline: auto;
   margin-bottom: var(--space-lg);
   color: var(--color-text-muted);
 }
@@ -136,6 +104,7 @@
 .stats-grid {
   display: grid;
   gap: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 .features__grid {
@@ -160,6 +129,8 @@
 .about-image img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  width: 100%;
+  height: auto;
 }
 
 .cta-banner {
@@ -198,6 +169,7 @@
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
     transition: var(--transition);
     z-index: var(--z-overlay);
+    padding-top: 70px;
   }
 
   .nav.active {
@@ -220,5 +192,9 @@
 
   .section {
     padding-block: var(--space-lg);
+  }
+
+  .logo.bbh-bartle-regular {
+    font-size: 1.5rem;
   }
 }

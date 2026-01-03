@@ -44,6 +44,9 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover,
@@ -68,6 +71,7 @@
 .contact-form {
   max-width: 600px;
   margin-inline: auto;
+  text-align: left;
 }
 
 .form-group {
@@ -81,7 +85,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: var(--space-sm);
   border: 1px solid var(--color-border);
@@ -92,7 +97,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.2);
@@ -184,7 +190,16 @@ textarea:focus {
   transform: translateX(26px);
 }
 
-/* Beautified select */
+/* Settings Page */
+.settings-group {
+  margin-bottom: var(--space-xl);
+}
+
+.settings-group h2 {
+  margin-bottom: var0(--space-md);
+}
+
+/* Language Select */
 .language-select {
   width: 100%;
   max-width: 300px;
@@ -208,10 +223,4 @@ textarea:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.2);
-}
-
-[data-theme="dark"] .language-select {
-  background-color: var(--color-bg-secondary);
-  border-color: var(--color-border);
-  color: var(--color-text);
 }

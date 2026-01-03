@@ -13,6 +13,32 @@
   background-color: #e5e7eb;
 }
 
-[data-theme="dark"] .dark-mode-toggle__icon {
-  content: "☀️";
+/* Dark mode form fields */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-color: #4b5563;
+}
+
+/* Dark mode select arrow */
+[data-theme="dark"] .language-select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e5e7eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Dark mode for error messages */
+[data-theme="dark"] .error-message {
+  color: #fca5a5;
+}
+
+/* Dark mode for form responses */
+[data-theme="dark"] .form-response.success {
+  background-color: #166534;
+  color: #dcfce7;
+}
+
+[data-theme="dark"] .form-response.error {
+  background-color: #b91c1c;
+  color: #fee2e2;
 }
