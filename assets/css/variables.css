@@ -9,11 +9,9 @@
   --color-border: #e2e8f0;
   --color-card-bg: #ffffff;
 
-  /* Dark Mode Overrides (set in darkmode.css) */
-
   /* Typography */
   --font-family-body: 'Inter', system-ui, sans-serif;
-  --font-family-heading: 'Poppins', system-ui, sans-serif;
+  --font-family-heading: 'BBH Bartle', serif; /* ✅ Updated to BBH Bartle */
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;

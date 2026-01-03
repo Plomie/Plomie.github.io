@@ -19,8 +19,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading); /* ✅ Now uses BBH Bartle */
   margin-top: 0;
+  font-weight: normal; /* BBH Bartle is display-style; often looks better without bold */
 }
 
 h1 { font-size: var(--font-size-h1); }
