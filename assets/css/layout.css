@@ -113,9 +113,10 @@
   line-height: 1.2;
 }
 
+/* FIXED: Centered hero text */
 .hero__text {
   max-width: 600px;
-  margin-inline: auto var(--space-md);
+  margin-inline: auto; /* FIXED: centered properly */
   margin-bottom: var(--space-lg);
   color: var(--color-text-muted);
 }
