@@ -98,6 +98,7 @@ class I18n {
     const path = window.location.pathname;
     const pages = {
       '/': 'home',
+      '/index.html': 'home',
       '/about.html': 'about',
       '/services.html': 'services',
       '/contact.html': 'contact',
@@ -108,5 +109,7 @@ class I18n {
 }
 
 // Initialize translations
-const i18n = new I18n();
-document.addEventListener('DOMContentLoaded', () => i18n.init());
+document.addEventListener('DOMContentLoaded', () => {
+  const i18n = new I18n();
+  i18n.init();
+});

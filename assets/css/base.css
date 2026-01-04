@@ -110,9 +110,3 @@ ul {
 main {
   flex: 1 0 auto;
 }
-
-/* Custom elements */
-site-header, site-footer {
-  display: block;
-  width: 100%;
-}
