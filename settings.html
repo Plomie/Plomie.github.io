@@ -3,38 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Manage your Modern Business account settings including appearance and language preferences.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://picsum.photos data:; connect-src 'self'">
   <title data-i18n="settingsTitle">Settings | Modern Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"></noscript>
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/darkmode.css">
+  <style>
+    .header, .section { opacity: 0; transition: opacity 0.3s ease; }
+    .header.loaded, .section.loaded { opacity: 1; }
+  </style>
 </head>
 <body>
-  <header class="header" role="banner">
-    <div class="container header__inner">
-      <a href="/" class="logo bbh-bartle-regular" aria-label="Home">ModernBiz</a>
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav" role="navigation">
-        <ul class="nav__list">
-          <li><a href="/" class="nav__link">Home</a></li>
-          <li><a href="/about.html" class="nav__link">About</a></li>
-          <li><a href="services.html" class="nav__link">Services</a></li>
-          <li><a href="/contact.html" class="nav__link">Contact</a></li>
-          <li><a href="/settings.html" class="nav__link active">Settings</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <site-header></site-header>
 
-  <main>
+  <main id="main-content">
     <section class="section" aria-labelledby="settings-heading">
       <div class="container">
         <h1 id="settings-heading" class="bbh-bartle-regular" data-i18n="settings">Settings</h1>
@@ -67,16 +59,11 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="inter-normal">&copy; 2025 Modern Business. All rights reserved.</p>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
-  <script src="/assets/js/darkmode.js"></script>
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/animations.js"></script>
-  <script src="/assets/js/i18n.js"></script>
-  <script src="/assets/js/settings.js"></script>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/animations.js" defer></script>
+  <script src="/assets/js/i18n.js" defer></script>
+  <script src="/assets/js/settings.js" defer></script>
 </body>
 </html>

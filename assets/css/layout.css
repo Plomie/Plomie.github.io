@@ -4,7 +4,7 @@
   top: 0;
   z-index: var(--z-header);
   background-color: var(--color-bg);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow);
   padding-block: var(--space-md);
 }
 
@@ -28,11 +28,11 @@
 }
 
 .logo.bbh-bartle-regular {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
   color: var(--color-text);
   text-decoration: none;
   letter-spacing: 1px;
-  /* Stronger glow effect with red */
+  /* Stronger glow effect */
   text-shadow: 0 0 12px rgba(220, 38, 38, 0.5), 
                0 0 24px rgba(220, 38, 38, 0.3);
 }
@@ -49,6 +49,7 @@
   border: none;
   cursor: pointer;
   padding: var(--space-xs);
+  z-index: var(--z-header);
 }
 
 .mobile-menu-toggle span {
@@ -77,7 +78,7 @@
   color: var(--color-text);
   padding: var(--space-xs) var(--space-md);
   border-radius: var(--border-radius);
-  transition: var(--transition);
+  transition: var(--transition-fast);
   text-decoration: none;
   display: block;
   position: relative;
@@ -93,7 +94,7 @@
   width: 0;
   height: 2px;
   background-color: var(--color-accent);
-  transition: var(--transition);
+  transition: var(--transition-default);
   transform: translateX(-50%);
 }
 
@@ -123,9 +124,27 @@
 }
 
 .hero {
-  padding-block: var(--space-xxl) var(--space-xl);
+  padding-block: var(--space-2xl) var(--space-xl);
   text-align: center;
   background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__title {
@@ -153,7 +172,7 @@
 }
 
 .services-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards for better text fit */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .stats-grid {
@@ -165,13 +184,17 @@
   display: grid;
   gap: var(--space-xl);
   margin-top: var(--space-lg);
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 .about-image img {
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
   width: 100%;
   height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
 .cta-banner {
@@ -179,11 +202,26 @@
   color: white;
   padding-block: var(--space-xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
 }
 
 .cta-banner h2 {
   color: inherit;
   margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
 }
 
 /* Footer */
@@ -192,6 +230,20 @@
   padding-block: var(--space-md);
   text-align: center;
   color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-lg);
 }
 
 /* Responsive */
@@ -210,7 +262,8 @@
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
     transition: var(--transition);
     z-index: var(--z-overlay);
-    padding-top: 70px;
+    padding-top: 80px;
+    padding-bottom: var(--space-xl);
   }
 
   .nav.active {
@@ -219,8 +272,9 @@
 
   .nav__list {
     flex-direction: column;
-    padding: var(--space-xl);
-    gap: var(--space-md);
+    padding: 0 var(--space-md);
+    gap: var(--space-lg);
+    align-items: flex-start;
   }
 
   .nav__link {
@@ -239,7 +293,7 @@
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 8vw, 2rem);
   }
 
   .section {
@@ -247,12 +301,33 @@
   }
 
   .logo.bbh-bartle-regular {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 6vw, 1.5rem);
   }
   
   /* Mobile logo glow */
   .logo.bbh-bartle-regular {
     text-shadow: 0 0 10px rgba(220, 38, 38, 0.4), 
                  0 0 20px rgba(220, 38, 38, 0.25);
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .nav__link::after {
+    transition: none;
   }
 }
