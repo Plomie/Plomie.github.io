@@ -4,8 +4,8 @@
   --color-bg-secondary: #f8fafc;
   --color-text: #1e293b;
   --color-text-muted: #64748b;
-  --color-accent: #b30000;
-  --color-accent-hover: #dc0000;
+  --color-accent: #dc2626; /* Changed to red */
+  --color-accent-hover: #b91c1c; /* Darker red for hover */
   --color-border: #e2e8f0;
   --color-card-bg: #ffffff;
 

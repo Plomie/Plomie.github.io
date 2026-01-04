@@ -1,10 +1,10 @@
 [data-theme="dark"] {
   --color-bg: #0f172a;
-  --color-bg-secondary: #001638;
+  --color-bg-secondary: #1e293b;
   --color-text: #e5e7eb;
   --color-text-muted: #94a3b8;
-  --color-accent: #1d0071;
-  --color-accent-hover: #4022b8;
+  --color-accent: #f87171; /* Light red for dark mode */
+  --color-accent-hover: #fca5a5; /* Lighter red for hover in dark mode */
   --color-border: #334155;
   --color-card-bg: #1e293b;
 }
@@ -18,22 +18,22 @@
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .stat-card {
   background-color: var(--color-card-bg);
-  /* Enhanced dark mode glow */
+  /* Enhanced dark mode glow with red */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
               0 2px 4px -1px rgba(0, 0, 0, 0.25),
-              0 0 20px rgba(167, 139, 250, 0.3);
+              0 0 20px rgba(248, 113, 113, 0.3);
 }
 
 [data-theme="dark"] .card::before,
 [data-theme="dark"] .service-card::before,
 [data-theme="dark"] .stat-card::before {
-  background: linear-gradient(45deg, transparent, rgba(250, 139, 139, 0.4), transparent);
+  background: linear-gradient(45deg, transparent, rgba(248, 113, 113, 0.4), transparent);
 }
 
 [data-theme="dark"] .card:hover,
 [data-theme="dark"] .service-card:hover {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3),
-              0 0 30px rgba(167, 139, 250, 0.5);
+              0 0 30px rgba(248, 113, 113, 0.5);
 }
 
 /* Dark mode form fields */
@@ -66,13 +66,18 @@
   color: #fee2e2;
 }
 
-/* Dark mode logo glow - stronger effect */
+/* Dark mode logo glow - stronger effect with red */
 [data-theme="dark"] .logo.bbh-bartle-regular {
-  text-shadow: 0 0 12px rgba(255, 90, 87, 0.752), 
-               0 0 24px rgba(255, 94, 91, 0.212);
+  text-shadow: 0 0 12px rgba(248, 113, 113, 0.6), 
+               0 0 24px rgba(248, 113, 113, 0.4);
 }
 
 /* Dark mode nav link accent */
 [data-theme="dark"] .nav__link::after {
+  background-color: var(--color-accent);
+}
+
+/* Dark mode toggle button */
+[data-theme="dark"] .toggle-btn[aria-pressed="true"] .toggle-track {
   background-color: var(--color-accent);
 }
