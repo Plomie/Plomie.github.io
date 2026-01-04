@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px; /* Thinner accent line */
+  height: 1px; /* Thinner accent line */
   background-color: var(--color-accent);
   z-index: var(--z-header);
 }

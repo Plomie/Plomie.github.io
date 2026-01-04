@@ -1,10 +1,10 @@
 [data-theme="dark"] {
   --color-bg: #0f172a;
-  --color-bg-secondary: #003281;
+  --color-bg-secondary: #001638;
   --color-text: #e5e7eb;
   --color-text-muted: #94a3b8;
-  --color-accent: #a78bfa;
-  --color-accent-hover: #c4b5fd;
+  --color-accent: #1d0071;
+  --color-accent-hover: #4022b8;
   --color-border: #334155;
   --color-card-bg: #1e293b;
 }
@@ -27,7 +27,7 @@
 [data-theme="dark"] .card::before,
 [data-theme="dark"] .service-card::before,
 [data-theme="dark"] .stat-card::before {
-  background: linear-gradient(45deg, transparent, rgba(167, 139, 250, 0.4), transparent);
+  background: linear-gradient(45deg, transparent, rgba(250, 139, 139, 0.4), transparent);
 }
 
 [data-theme="dark"] .card:hover,
@@ -69,7 +69,7 @@
 /* Dark mode logo glow - stronger effect */
 [data-theme="dark"] .logo.bbh-bartle-regular {
   text-shadow: 0 0 12px rgba(255, 90, 87, 0.752), 
-               0 0 24px rgba(255, 94, 91, 0.529);
+               0 0 24px rgba(255, 94, 91, 0.212);
 }
 
 /* Dark mode nav link accent */
