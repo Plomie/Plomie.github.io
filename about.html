@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn about Modern Business's story, mission, and the team behind our digital solutions.">
   <title data-i18n="aboutTitle">About | Modern Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +12,8 @@
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/darkmode.css">
-  <style>
-    .header, .about-hero { opacity: 0; transition: opacity 0.3s ease; }
-    .header.loaded, .about-hero.loaded { opacity: 1; }
-  </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
   <header class="header" role="banner">
     <div class="container header__inner">
       <a href="/" class="logo bbh-bartle-regular" aria-label="Home">ModernBiz</a>
@@ -30,11 +23,10 @@
         <span></span>
       </button>
       <nav class="nav" role="navigation">
-        <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
         <ul class="nav__list">
           <li><a href="/" class="nav__link">Home</a></li>
           <li><a href="/about.html" class="nav__link active">About</a></li>
-          <li><a href="/services.html" class="nav__link">Services</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
           <li><a href="/contact.html" class="nav__link">Contact</a></li>
           <li><a href="/settings.html" class="nav__link">Settings</a></li>
         </ul>
@@ -42,7 +34,7 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <main>
     <section class="section about-hero" aria-labelledby="about-heading">
       <div class="container">
         <h1 id="about-heading" class="bbh-bartle-regular" data-i18n="ourStory">Our Story</h1>
@@ -52,10 +44,7 @@
             <p class="inter-normal" data-i18n="story2">Today, we serve clients globally — from startups to enterprises — delivering websites, apps, and strategies that drive real results.</p>
           </div>
           <div class="about-image" data-animate>
-            <img src="https://picsum.photos/600/400?grayscale" 
-                 alt="Team working together" 
-                 class="lazyload"
-                 loading="lazy">
+            <img src="https://picsum.photos/600/400?grayscale" alt="Team working together" />
           </div>
         </div>
       </div>
@@ -83,17 +72,12 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-container">
+    <div class="container">
       <p class="inter-normal">&copy; 2025 Modern Business. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="/about.html" class="inter-medium">About</a>
-        <a href="/services.html" class="inter-medium">Services</a>
-        <a href="/contact.html" class="inter-medium">Contact</a>
-        <a href="/settings.html" class="inter-medium">Settings</a>
-      </div>
     </div>
   </footer>
 
+  <script src="/assets/js/darkmode.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/animations.js"></script>
   <script src="/assets/js/i18n.js"></script>
